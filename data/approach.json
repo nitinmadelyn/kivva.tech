@@ -1,0 +1,29 @@
+{
+  "approach1": [
+    {
+      "title": "Perfection",
+      "description": "Pixel-perfect design, clean code, and thoughtful user experience, every detail is engineered with care to meet the highest standards.",
+      "icon": "/img/icons/h70_appr-01.webp"
+    },
+    {
+      "title": "Innovative",
+      "description": "We stay ahead of trends, using the latest design systems, interactive animations, and cutting-edge technologies to elevate your brand.",
+      "icon": "/img/icons/h70_appr-02.webp"
+    },
+    {
+      "title": "Expertise",
+      "description": "With strong command across modern frameworks, cloud platforms, DevOps, and mobile-first strategies, we bring end-to-end technical clarity to your product.",
+      "icon": "/img/icons/h70_appr-03.webp"
+    },
+    {
+      "title": "Full-Cycle services",
+      "description": "From product strategy, branding, and UI/UX to complete web, mobile, and custom software development, we cover all your digital needs under one roof.",
+      "icon": "/img/icons/h70_appr-04.webp"
+    },
+    {
+      "title": "Client Success",
+      "description": "Every project is built with the business outcome in mind. Our clients consistently achieve higher engagement, better conversions, and measurable growth.",
+      "icon": "/img/icons/h70_appr-05.webp"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Home",
+    "href": "/"
+  },
+  {
+    "label": "About us",
+    "href": "/about-us"
+  },
+  {
+    "label": "Works",
+    "href": "/works",
+    "counter": 10
+  },
+  {
+    "label": "Services",
+    "href": "/services"
+  },
+  {
+    "label": "Insights",
+    "href": "/insights"
+  },
+  {
+    "label": "Contact",
+    "href": "/contact"
+  }
+]
