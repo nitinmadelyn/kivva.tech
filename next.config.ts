@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,  // ⭐ REQUIRED for static export (CloudFront/S3)
   },
+  trailingSlash: true,
 };
 
 export default nextConfig;

@@ -163,9 +163,9 @@ export default function MobileMenu() {
                     className="menu-promo__caption fade-in-elm"
                     style={{ transitionDelay: '0.4s' }}
                   >
-                    👋 New Rayo template is here!
+                    👋 Let's discuss that project!
                     <br />
-                    Showcase your projects, services and expertise with impact.
+                    Which is running in your mind for so long.
                   </p>
                   <div
                     className="menu-promo__video fade-in-up-elm"
@@ -202,7 +202,7 @@ export default function MobileMenu() {
               className="mxd-menu__data fade-in-up-elm"
               style={{ transitionDelay: '0.4s' }}
             >
-              <p className="t-xsmall">
+              {/* <p className="t-xsmall">
                 Made with <i className="ph-fill ph-heart t-additional" /> by{' '}
                 <a
                   className="no-effect"
@@ -211,10 +211,10 @@ export default function MobileMenu() {
                 >
                   ib themes
                 </a>
-              </p>
+              </p> */}
               <p className="t-xsmall">
                 <i className="ph ph-copyright" />
-                2025
+                2026
               </p>
             </div>
           </div>
