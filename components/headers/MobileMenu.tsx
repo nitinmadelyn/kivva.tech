@@ -91,7 +91,7 @@ export default function MobileMenu() {
   }, [isMenuOpen]);
   return (
     <nav
-      className={`mxd-nav__wrap  ${isActive ? "active_menu" : ""} `}
+      className={`mxd-nav__wrap  ${isActive ? 'active_menu' : ''} `}
       data-lenis-prevent=""
     >
       {/* Hamburger Start */}
@@ -102,7 +102,7 @@ export default function MobileMenu() {
             e.preventDefault();
             handleToggle();
           }}
-          className={`mxd-nav__hamburger ${isMenuOpen ? "nav-open" : ""}`}
+          className={`mxd-nav__hamburger ${isMenuOpen ? 'nav-open' : ''}`}
           ref={hamburgerBtnRef}
         >
           {/* flip element */}
@@ -113,7 +113,7 @@ export default function MobileMenu() {
       </div>
       {/* Hamburger End */}
       {/* Main Navigation Start */}
-      <div className={`mxd-menu__wrapper ${isActive ? "active_menu" : ""} `}>
+      <div className={`mxd-menu__wrapper ${isActive ? 'active_menu' : ''} `}>
         {/* background active layer */}
         <div className="mxd-menu__base" />
         {/* menu container */}
@@ -123,7 +123,7 @@ export default function MobileMenu() {
             <div className="mxd-menu__left">
               <p
                 className="mxd-menu__caption fade-in-elm"
-                style={{ transitionDelay: "0.4s" }}
+                style={{ transitionDelay: '0.4s' }}
               >
                 🦄 Innovative design
                 <br />
@@ -138,70 +138,17 @@ export default function MobileMenu() {
                         className="main-menu__item fade-in-up-elm"
                         style={{ transitionDelay: `${index * 0.1}s` }}
                       >
-                        {item.submenu ? (
-                          <>
-                            <div
-                              className="main-menu__toggle"
-                              onClick={() =>
-                                setActiveSubmenu((pre) =>
-                                  pre == index ? -1 : index
-                                )
-                              }
-                            >
-                              <AnimatedButton
-                                text={item.title}
-                                as="span"
-                                className="main-menu__link btn btn-anim"
-                              ></AnimatedButton>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width={20}
-                                height={20}
-                                viewBox="0 0 20 20"
-                              >
-                                <path d="M19.6,9.6h-3.9c-.4,0-1.8-.2-1.8-.2-.6,0-1.1-.2-1.6-.6-.5-.3-.9-.8-1.2-1.2-.3-.4-.4-.9-.5-1.4,0,0,0-1.1-.2-1.5V.4c0-.2-.2-.4-.4-.4s-.4.2-.4.4v4.4c0,.4-.2,1.5-.2,1.5,0,.5-.2,1-.5,1.4-.3.5-.7.9-1.2,1.2s-1,.5-1.6.6c0,0-1.2,0-1.7.2H.4c-.2,0-.4.2-.4.4s.2.4.4.4h4.1c.4,0,1.7.2,1.7.2.6,0,1.1.2,1.6.6.4.3.8.7,1.1,1.1.3.5.5,1,.6,1.6,0,0,0,1.3.2,1.7v4.1c0,.2.2.4.4.4s.4-.2.4-.4v-4.1c0-.4.2-1.7.2-1.7,0-.6.2-1.1.6-1.6.3-.4.7-.8,1.1-1.1.5-.3,1-.5,1.6-.6,0,0,1.3,0,1.8-.2h3.9c.2,0,.4-.2.4-.4s-.2-.4-.4-.4Z" />
-                              </svg>
-                            </div>
-                            <ul
-                              className="submenu"
-                              style={{
-                                height:
-                                  activeSubmenu === index
-                                    ? `calc(${submenuHeights[index]}px + 2rem)`
-                                    : 0,
-                                paddingTop:
-                                  activeSubmenu === index ? "2rem" : 0,
-                                transition: "all 0.3s ease",
-                              }}
-                              ref={(el) => {
-                                submenuRefs.current[index] = el;
-                              }}
-                            >
-                              {item.submenu.map((sub, i) => (
-                                <li
-                                  key={i}
-                                  className={`submenu__item ${
-                                    isMenuActive(sub.href) ? "active" : ""
-                                  }`}
-                                >
-                                  <Link href={sub.href}>{sub.label}</Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </>
-                        ) : (
-                          <>
-                            {item.href ? (
-                              <AnimatedButton
-                                text={item.title}
-                                className="main-menu__link btn btn-anim"
-                                href={item.href}
-                              ></AnimatedButton>
-                            ) : (
-                              ""
-                            )}
-                          </>
-                        )}
+                        <>
+                          {item.href ? (
+                            <AnimatedButton
+                              text={item.title}
+                              className="main-menu__link btn btn-anim"
+                              href={item.href}
+                            ></AnimatedButton>
+                          ) : (
+                            ''
+                          )}
+                        </>
                       </li>
                     ))}
                   </ul>
@@ -214,7 +161,7 @@ export default function MobileMenu() {
                 <div className="menu-promo__content">
                   <p
                     className="menu-promo__caption fade-in-elm"
-                    style={{ transitionDelay: "0.4s" }}
+                    style={{ transitionDelay: '0.4s' }}
                   >
                     👋 New Rayo template is here!
                     <br />
@@ -222,7 +169,7 @@ export default function MobileMenu() {
                   </p>
                   <div
                     className="menu-promo__video fade-in-up-elm"
-                    style={{ transitionDelay: "0.3s" }}
+                    style={{ transitionDelay: '0.3s' }}
                   >
                     <video
                       className="menu-video"
@@ -253,10 +200,10 @@ export default function MobileMenu() {
             {/* data bottom line */}
             <div
               className="mxd-menu__data fade-in-up-elm"
-              style={{ transitionDelay: "0.4s" }}
+              style={{ transitionDelay: '0.4s' }}
             >
               <p className="t-xsmall">
-                Made with <i className="ph-fill ph-heart t-additional" /> by{" "}
+                Made with <i className="ph-fill ph-heart t-additional" /> by{' '}
                 <a
                   className="no-effect"
                   href="https://themeforest.net/user/ib-themes/portfolio"
