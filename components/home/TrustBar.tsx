@@ -157,14 +157,14 @@ function ClientLogo({
   height: number;
 }) {
   return (
-    <div className="flex-shrink-0 flex items-center justify-center px-5 py-3 rounded-xl bg-[#1e2330] border border-white/8">
+    <div className="flex-shrink-0 flex items-center justify-center px-4">
       <Image
         src={`/logos/${file}`}
         alt={`${name} logo`}
         width={width}
         height={height}
-        className="opacity-70 hover:opacity-100 transition-opacity duration-200"
-        style={{ height: "32px", width: "auto", filter: "brightness(0) invert(1)" }}
+        className="opacity-80 hover:opacity-100 transition-opacity duration-200"
+        style={{ height: `${height}px`, width: "auto" }}
       />
     </div>
   );

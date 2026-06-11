@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   // Server Actions, API routes, and image optimisation all work out of the box.
 
   images: {
+    unoptimized: true,
     dangerouslyAllowSVG: true,
     contentDispositionType: "inline",
   },
