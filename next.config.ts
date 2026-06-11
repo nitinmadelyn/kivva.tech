@@ -18,6 +18,8 @@ const nextConfig: NextConfig = {
   // Reduce bundle size by tree-shaking heavy packages at build time
   experimental: {
     optimizePackageImports: ["react", "react-dom"],
+    // Inline critical CSS and defer the rest — eliminates render-blocking stylesheet
+    optimizeCss: true,
   },
 };
 
