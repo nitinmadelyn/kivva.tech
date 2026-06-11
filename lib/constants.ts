@@ -85,7 +85,7 @@ export const CLIENT_LOGOS: Array<{ name: string; file: string; width: number; he
   { name: "Company 3", file: "company-3.webp", width: 100, height: 32 },
   { name: "Company 4", file: "company-4.svg",  width: 100, height: 32 },
   { name: "Company 5", file: "company-5.svg",  width: 100, height: 32 },
-  { name: "Company 6", file: "company-6.avif", width: 100, height: 32 },
+  { name: "Company 6", file: "company-6.avif", width: 80, height: 24 },
   { name: "Company 7", file: "company-7.webp", width: 100, height: 32 },
   { name: "Company 8", file: "company-8.webp", width: 140, height: 46 },
 ];
