@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/* ─── Brand Design Tokens ────────────────────────────────────────────────── */
+/* All brand colours and spacing tokens live here.                            */
+/* Tailwind v4 reads @theme to generate utility classes like bg-brand-blue.  */
+@theme inline {
+  /* Font stacks */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Brand accent — used only on CTAs and key highlights */
+  --color-brand-blue: #4f9dff;
+  --color-brand-blue-hover: #6aadff;
+  --color-brand-blue-muted: rgba(79, 157, 255, 0.08);
+  --color-brand-blue-border: rgba(79, 157, 255, 0.2);
+
+  /* Dark surface hierarchy */
+  --color-surface-900: #030303;
+  --color-surface-800: #050505;
+  --color-surface-700: #080808;
+  --color-surface-600: #0d0d0d;
+  --color-surface-500: #111111;
+
+  /* Border shades on dark */
+  --color-border-900: #1a1a1a;
+  --color-border-800: #1c1c1c;
+  --color-border-700: #2a2a2a;
+  --color-border-600: #2d2d2d;
+
+  /* Text on dark backgrounds */
+  --color-white: #ffffff;
+  --color-text-dim: #666666;
+  --color-text-muted: #555555;
+  --color-text-faint: #444444;
+
+  /* Light section colours */
+  --color-light-bg: #ffffff;
+  --color-light-surface: #f9fafb;
+  --color-light-border: #e5e7eb;
+  --color-light-text: #111111;
+  --color-light-text-muted: #6b7280;
+  --color-light-text-faint: #9ca3af;
+
+  /* Accent warm — used for star ratings */
+  --color-amber: #f59e0b;
+}
+
+/* ─── Base Reset & Global Defaults ──────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Smooth anchor scroll */
+  scroll-behavior: smooth;
+  /* Prevent font size inflation on mobile after orientation change */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  /* Site is always dark — no OS-level override needed */
+  background-color: #050505;
+  color: #ffffff;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  /* Crisp sub-pixel text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* Prevent content overflow causing unwanted horizontal scroll */
+  overflow-x: hidden;
+}
+
+/* ─── Focus Ring ─────────────────────────────────────────────────────────── */
+/* Visible for keyboard users, invisible for mouse users (uses :focus-visible)*/
+:focus-visible {
+  outline: 2px solid #4f9dff;
+  outline-offset: 2px;
+}
+
+/* ─── Logo Marquee Animation ─────────────────────────────────────────────── */
+/* Used by TrustBar to scroll client logos infinitely.                        */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+  will-change: transform;
+}
+
+/* Pause on hover so visitors can read logos */
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ─── Utility: Screen-reader only ───────────────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
