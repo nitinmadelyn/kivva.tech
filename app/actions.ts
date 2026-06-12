@@ -12,7 +12,7 @@
  *   await resend.emails.send({ from: "...", to: "...", subject: "...", html: "..." });
  */
 
-import { SITE } from "@/lib/constants";
+import { SITE } from "@/lib/constants"; 
 
 // ─── Shared types ─────────────────────────────────────────────────────────────
 
