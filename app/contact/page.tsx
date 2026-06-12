@@ -138,8 +138,8 @@ export default function ContactPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d={ICONS.clock} />
                   </svg>
                   <div>
-                    <p className="text-xs font-semibold text-white">Reply within 24 hours</p>
-                    <p className="text-[11px] text-text-dim mt-1 leading-relaxed">
+                    <p className="text-xs font-semibold text-brand-blue">Reply within 24 hours</p>
+                    <p className="text-[11px] text-light-text-muted mt-1 leading-relaxed">
                       Mon–Fri, 9 AM – 6 PM IST.<br />Urgent? Call us directly.
                     </p>
                   </div>
