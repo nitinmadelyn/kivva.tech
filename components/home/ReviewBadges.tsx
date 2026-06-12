@@ -40,6 +40,7 @@ export default function ReviewBadges() {
         {/* Partner badges */}
         <div className="flex flex-wrap items-center justify-center gap-10 sm:gap-16">
           <ShopifyPartnerLogo />
+          <ShopifyPlusPartnerLogo />
           <AWSCertifiedLogo />
         </div>
 
@@ -77,6 +78,19 @@ function ShopifyPartnerLogo() {
     <img
       src="/logos/shopify-partner.png"
       alt="Shopify Partner"
+      style={{ height: "48px", width: "auto" }}
+      loading="lazy"
+      decoding="async"
+    />
+  );
+}
+
+function ShopifyPlusPartnerLogo() {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/logos/shopify-plus-partner.png"
+      alt="Shopify Plus Partner"
       style={{ height: "48px", width: "auto" }}
       loading="lazy"
       decoding="async"
