@@ -69,19 +69,45 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 
       {/* Attribution */}
       <footer className="mt-5 pt-4 border-t border-light-border flex items-center gap-3">
-        {/* Initials avatar */}
-        <div
-          className="flex items-center justify-center w-9 h-9 rounded-full bg-[#EEF2FF] text-xs font-medium text-brand-blue flex-shrink-0"
-          aria-hidden="true"
-        >
-          {testimonial.initials}
-        </div>
+        {/* Avatar — real photo if available, initials fallback */}
+        {testimonial.photo ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={testimonial.photo}
+            alt={testimonial.name}
+            className="w-9 h-9 rounded-full object-cover flex-shrink-0"
+            loading="lazy"
+            decoding="async"
+          />
+        ) : (
+          <div
+            className="flex items-center justify-center w-9 h-9 rounded-full bg-[#EEF2FF] text-xs font-medium text-brand-blue flex-shrink-0"
+            aria-hidden="true"
+          >
+            {testimonial.initials}
+          </div>
+        )}
         <div>
           <cite className="not-italic text-[13px] font-medium text-light-text block">
             {testimonial.name}
           </cite>
           <span className="text-xs text-light-text-faint">
-            {testimonial.role}, {testimonial.company}
+            {testimonial.role}
+            {testimonial.companyHref ? (
+              <>
+                {" @ "}
+                <a
+                  href={testimonial.companyHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-light-text transition-colors"
+                >
+                  {testimonial.company}
+                </a>
+              </>
+            ) : (
+              <>, {testimonial.company}</>
+            )}
           </span>
         </div>
       </footer>

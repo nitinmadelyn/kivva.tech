@@ -13,19 +13,19 @@ import { CASE_STUDIES_LIST } from "@/lib/phase5-data";
 export const metadata: Metadata = buildMetadata({
   title: "Case Studies",
   description:
-    "Real results from real clients — AI routing, healthcare portals, maritime fleet intelligence, restaurant tech, and property portals built by KivvaTech.",
+    "Real results from real clients — enterprise SaaS, PropTech, eCommerce, data platforms, and fintech built by KivvaTech for companies including Acquire.io, Import.io, Dexi.io, Before You Buy, Ludic, and Stashly.",
   path: "/case-studies",
-  keywords: ["case studies", "client results", "AI development results", "software development case studies"],
+  keywords: ["case studies", "client results", "enterprise SaaS development", "software development case studies", "KivvaTech portfolio"],
 });
 
 const CONTAINER = "max-w-5xl mx-auto px-4 sm:px-6 lg:px-8";
 const ARROW_ICON = "m8.25 4.5 7.5 7.5-7.5 7.5";
 
 const SUMMARY_STATS = [
-  { value: "40%", label: "faster delivery — Logibee" },
-  { value: "60%", label: "admin reduction — Ivira" },
-  { value: "500+", label: "vessels tracked — Navig8" },
-  { value: "5,000+", label: "listings at launch — Doors Open" },
+  { value: "60%", label: "first-response reduction — Acquire.io" },
+  { value: "20M+", label: "data points/day — Import.io" },
+  { value: "312%", label: "conversion increase — Ludic" },
+  { value: "SOC 2", label: "Type II certified — Stashly" },
 ];
 
 export default function CaseStudiesPage() {
@@ -71,8 +71,23 @@ export default function CaseStudiesPage() {
                   href={cs.path}
                   className="group flex flex-col sm:flex-row gap-6 p-6 rounded-2xl border border-light-border bg-light-surface hover:border-brand-blue-border hover:bg-brand-blue-muted transition-all duration-200"
                 >
-                  {/* Left: meta */}
-                  <div className="sm:w-44 flex-shrink-0 flex flex-col gap-2">
+                  {/* Left: logo + meta */}
+                  <div className="sm:w-44 flex-shrink-0 flex flex-col gap-3">
+                    {/* Company logo */}
+                    <div className="h-8 flex items-center">
+                      {cs.logo ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={cs.logo}
+                          alt={`${cs.client} logo`}
+                          className="h-7 w-auto max-w-[120px] object-contain opacity-70 group-hover:opacity-90 transition-opacity duration-200"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      ) : (
+                        <span className="text-sm font-semibold text-light-text-muted">{cs.client}</span>
+                      )}
+                    </div>
                     <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-brand-blue-border bg-brand-blue-muted w-fit">
                       <span className="w-1.5 h-1.5 rounded-full bg-brand-blue" aria-hidden="true" />
                       <span className="text-[10px] font-medium text-brand-blue">{cs.badge}</span>
@@ -82,7 +97,9 @@ export default function CaseStudiesPage() {
 
                   {/* Middle: content */}
                   <div className="flex-1 min-w-0">
-                    <p className="text-xs text-light-text-faint mb-1 font-medium uppercase tracking-wide">{cs.client}</p>
+                    {!cs.logo && (
+                      <p className="text-xs text-light-text-faint mb-1 font-medium uppercase tracking-wide">{cs.client}</p>
+                    )}
                     <h2 className="text-base sm:text-lg font-bold text-light-text group-hover:text-brand-blue transition-colors leading-snug mb-2">
                       {cs.title}
                     </h2>

@@ -13,6 +13,7 @@
 import Link from "next/link";
 import DesktopNav from "./DesktopNav";
 import MobileMenuToggle from "./MobileMenuToggle";
+import HireDevsDropdown from "./HireDevsDropdown";
 
 export default function Navbar() {
   return (
@@ -41,12 +42,7 @@ export default function Navbar() {
 
           {/* ── Right side — CTAs + mobile hamburger ──────────────────────── */}
           <div className="ml-auto flex items-center gap-3">
-            <Link
-              href="/hire-developers"
-              className="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium text-white border border-border-700 hover:border-white/30 hover:text-white rounded-md transition-colors duration-150"
-            >
-              Hire Developers
-            </Link>
+            <HireDevsDropdown />
             <Link
               href="/book-a-meeting"
               className="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-brand-blue hover:bg-brand-blue-hover rounded-md transition-colors duration-150"

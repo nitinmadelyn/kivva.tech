@@ -165,34 +165,34 @@ export interface CaseStudy {
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
-    id: "logibee",
-    metric: "40%",
-    metricLabel: "faster delivery",
-    industry: "Logistics",
-    title: "AI platform cuts delivery times by 40% for Logibee",
-    summary:
-      "Built a real-time routing AI that reduced operational costs by 28% and eliminated manual dispatch entirely.",
-    href: "/case-studies/logibee",
-  },
-  {
-    id: "ivira",
+    id: "acquire",
     metric: "60%",
-    metricLabel: "less admin work",
-    industry: "Healthcare",
-    title: "Patient portal reduces admin workload by 60% for Ivira",
+    metricLabel: "faster first response",
+    industry: "SaaS",
+    title: "Acquire.io scales to Fortune 500 clients with rebuilt cobrowse and AI chat",
     summary:
-      "Automated scheduling, billing, and clinical workflows across a 12-clinic network.",
-    href: "/case-studies/ivira",
+      "Rebuilt cobrowse engine, AI chatbot, WebRTC video, and 25-language platform for a unified enterprise customer engagement product.",
+    href: "/case-studies/acquire",
   },
   {
-    id: "navig8",
-    metric: "500+",
-    metricLabel: "vessels tracked live",
-    industry: "Maritime",
-    title: "Navig8 Connect delivers real-time visibility across 500+ vessels",
+    id: "import-io",
+    metric: "20M+",
+    metricLabel: "data points per day",
+    industry: "Enterprise Data",
+    title: "Import.io processes 20M+ data points daily with AI-powered extraction",
     summary:
-      "Live tracking, predictive ETA alerts, and a unified fleet management dashboard.",
-    href: "/case-studies/navig8",
+      "Rebuilt the extraction engine with ML-based DOM recognition, distributed Kafka pipeline, and 30+ BI integrations.",
+    href: "/case-studies/import-io",
+  },
+  {
+    id: "beforeyoubuy",
+    metric: "3x",
+    metricLabel: "booking volume growth",
+    industry: "PropTech",
+    title: "Before You Buy scales to 250+ inspectors across 40+ Australian cities",
+    summary:
+      "Built an end-to-end inspection platform with instant online booking, field mobile app, and 2-hour automated report delivery.",
+    href: "/case-studies/beforeyoubuy",
   },
 ];
 
@@ -239,36 +239,44 @@ export interface Testimonial {
   name: string;
   role: string;
   company: string;
+  companyHref?: string;
   initials: string;
+  photo?: string; // path relative to /public, e.g. "/testimonials/hilla.jpg"
 }
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    id: "rob",
+    id: "hilla",
     quote:
-      "KivvaTech delivered exceptional iOS and Android apps with responsive support and outstanding problem-solving expertise throughout.",
-    name: "Rob Machado",
-    role: "CEO",
-    company: "LogiTech Solutions",
-    initials: "RM",
-  },
-  {
-    id: "alex",
-    quote:
-      "Dedicated developers who got the job done on time and cost-effectively. The quality and communication were both outstanding.",
-    name: "Alexandar Salahsour",
-    role: "Founder",
-    company: "Ivira Health",
-    initials: "AS",
-  },
-  {
-    id: "joe",
-    quote:
-      "Consistently delivers reliable, high-quality solutions. Communication is exceptional and it genuinely feels like an in-house team.",
-    name: "Joe Pellegrino",
+      "The team's attention to detail, creativity, and technical expertise exceeded our expectations. We've received so much positive feedback from our customers already.",
+    name: "Hilla Pedramparsi",
     role: "CTO",
-    company: "Navig8 Connect",
-    initials: "JP",
+    company: "Import.io",
+    companyHref: "https://www.import.io",
+    initials: "HP",
+    photo: "/testimonials/hilla.webp",
+  },
+  {
+    id: "morten",
+    quote:
+      "KivvaTech didn't just deliver code, they delivered outcomes. Their engineers understood our architecture from day one, spotted bottlenecks we had missed for months, and shipped production-ready solutions fast. The ownership they brought made them feel like the best team we never had to hire full-time.",
+    name: "Morten Garbol Franck",
+    role: "VP of Engineering",
+    company: "Engage3",
+    companyHref: "https://www.engage3.com",
+    initials: "MF",
+    photo: "/testimonials/morten.png",
+  },
+  {
+    id: "sofia",
+    quote:
+      "Working with Kivva Tech was an absolute pleasure! They took the time to understand our business needs and translated them into a beautifully designed, user-friendly website.",
+    name: "Sofia Evlo",
+    role: "Graphic Designer",
+    company: "Dexi.io",
+    companyHref: "https://www.dexi.io",
+    initials: "SE",
+    photo: "/testimonials/sofia.webp",
   },
 ];
 

@@ -47,6 +47,16 @@ export default function CaseStudyTemplate({ config }: { config: CaseStudyConfig 
             <Link href={config.industryHref} className="text-xs text-text-faint hover:text-text-dim transition-colors border border-border-800 rounded-full px-3 py-1">
               {config.industry}
             </Link>
+            {config.logo && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={config.logo}
+                alt={`${config.client} logo`}
+                className="h-6 w-auto opacity-70"
+                loading="eager"
+                decoding="async"
+              />
+            )}
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">{config.title}</h1>
