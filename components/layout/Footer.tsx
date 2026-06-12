@@ -116,7 +116,7 @@ export default function Footer() {
             © {currentYear} KivvaTech. All rights reserved.
           </p>
           <p className="text-xs text-text-faint">
-            Florida · Dallas · Ahmedabad
+            Ahmedabad
           </p>
         </div>
       </div>

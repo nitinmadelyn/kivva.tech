@@ -16,7 +16,7 @@ import ContactForm from "@/components/forms/ContactForm";
 export const metadata: Metadata = buildMetadata({
   title: "Contact Us",
   description:
-    "Get in touch with KivvaTech. Offices in Florida, Dallas, and Ahmedabad. We respond within 24 hours.",
+    "Get in touch with KivvaTech. Office in Ahmedabad, India. We respond within 24 hours.",
   path: "/contact",
   keywords: ["contact KivvaTech", "KivvaTech office", "AI company contact"],
 });
@@ -140,7 +140,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-xs font-semibold text-white">Reply within 24 hours</p>
                     <p className="text-[11px] text-text-dim mt-1 leading-relaxed">
-                      Mon–Fri, 9 AM – 6 PM EST.<br />Urgent? Call us directly.
+                      Mon–Fri, 9 AM – 6 PM IST.<br />Urgent? Call us directly.
                     </p>
                   </div>
                 </div>

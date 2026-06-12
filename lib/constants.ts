@@ -14,21 +14,16 @@ export const SITE = {
     "Pre-vetted AI engineers, cloud architects, and full-stack teams. Onboard in 5 days. Trusted by 360+ companies across 15+ countries.",
   url: "https://www.kivva.tech",
   email: "coffee@kivva.tech",
-  phone: "+1 470-772-5053",
+  phone: "+91 97262 59232",
   social: {
     linkedin: "https://www.linkedin.com/company/kivva-tech/",
     instagram: "https://www.instagram.com/kivva.tech",
     facebook: "https://www.facebook.com/profile.php?id=61561154352822",
   },
   offices: [
-    { city: "Florida", address: "4905 NW 105th Dr, Coral Springs, FL 33076" },
-    {
-      city: "Dallas",
-      address: "17440 Dallas Parkway Suite 130, Dallas, TX 75287",
-    },
     {
       city: "Ahmedabad",
-      address: "10th Floor, Ashridhar Athens, Shivranjani Cross Rd, 380015",
+      address: "D710, Titanium Business Park, Near Makarba Underpass, Makarba, Ahmedabad 380007",
     },
   ],
 } as const;

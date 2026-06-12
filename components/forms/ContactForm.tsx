@@ -2,7 +2,7 @@
 
 /**
  * ContactForm — general enquiry form.
- * Uses React 19 useActionState + useFormStatus for pending state.
+ * Light-themed to match the contact page card.
  */
 
 import { useActionState } from "react";
@@ -36,7 +36,7 @@ function SubmitButton() {
             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
           </svg>
-          Sending…
+          Sending...
         </>
       ) : (
         "Send Message"
@@ -47,7 +47,7 @@ function SubmitButton() {
 
 function Label({ htmlFor, children }: { htmlFor: string; children: React.ReactNode }) {
   return (
-    <label htmlFor={htmlFor} className="block text-sm font-medium text-white mb-1.5">
+    <label htmlFor={htmlFor} className="block text-xs font-semibold text-light-text-muted uppercase tracking-wider mb-1.5">
       {children}
     </label>
   );
@@ -55,25 +55,25 @@ function Label({ htmlFor, children }: { htmlFor: string; children: React.ReactNo
 
 function FieldError({ message }: { message?: string }) {
   if (!message) return null;
-  return <p className="mt-1 text-xs text-red-400">{message}</p>;
+  return <p className="mt-1 text-xs text-red-500">{message}</p>;
 }
 
 const inputCls =
-  "w-full bg-[#111111] border border-[#2a2a2a] text-white placeholder:text-[#444] text-sm rounded-lg px-3.5 py-2.5 focus:outline-none focus:border-brand-blue transition-colors";
+  "w-full bg-white border border-light-border text-light-text placeholder:text-light-text-faint text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/10 transition-all";
 
 export default function ContactForm() {
   const [state, formAction] = useActionState(submitContactForm, INITIAL_STATE);
 
   if (state.success) {
     return (
-      <div className="flex flex-col items-center justify-center text-center py-16 px-8 rounded-xl border border-[#2a2a2a] bg-[#111111]">
-        <div className="w-14 h-14 rounded-full bg-brand-blue-muted flex items-center justify-center mb-5">
+      <div className="flex flex-col items-center justify-center text-center py-16 px-8">
+        <div className="w-14 h-14 rounded-full bg-brand-blue-muted border border-brand-blue-border flex items-center justify-center mb-5">
           <svg className="w-7 h-7 text-brand-blue" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
           </svg>
         </div>
-        <h2 className="text-xl font-semibold text-white mb-2">Message sent!</h2>
-        <p className="text-sm text-text-dim max-w-sm">{state.message}</p>
+        <h2 className="text-xl font-semibold text-light-text mb-2">Message sent!</h2>
+        <p className="text-sm text-light-text-muted max-w-sm">{state.message}</p>
       </div>
     );
   }
@@ -81,7 +81,7 @@ export default function ContactForm() {
   return (
     <form action={formAction} noValidate className="space-y-5">
       {!state.success && state.message && (
-        <div className="px-4 py-3 rounded-lg bg-red-500/10 border border-red-500/20 text-sm text-red-400">
+        <div className="px-4 py-3 rounded-lg bg-red-50 border border-red-200 text-sm text-red-600">
           {state.message}
         </div>
       )}
@@ -106,7 +106,7 @@ export default function ContactForm() {
         </div>
         <div>
           <Label htmlFor="phone">Phone</Label>
-          <input id="phone" name="phone" type="tel" autoComplete="tel" placeholder="+1 555 000 0000" className={inputCls} />
+          <input id="phone" name="phone" type="tel" autoComplete="tel" placeholder="+91 98765 43210" className={inputCls} />
         </div>
       </div>
 
@@ -124,7 +124,7 @@ export default function ContactForm() {
           id="message"
           name="message"
           rows={5}
-          placeholder="Tell us about your project, goals, or questions…"
+          placeholder="Tell us about your project, goals, or questions..."
           className={`${inputCls} resize-none`}
           required
         />
@@ -133,9 +133,9 @@ export default function ContactForm() {
 
       <SubmitButton />
 
-      <p className="text-center text-xs text-text-faint">
+      <p className="text-center text-xs text-light-text-faint">
         By submitting you agree to our{" "}
-        <a href="/privacy-policy" className="underline hover:text-text-dim transition-colors">Privacy Policy</a>.
+        <a href="/privacy-policy" className="underline hover:text-light-text-muted transition-colors">Privacy Policy</a>.
       </p>
     </form>
   );

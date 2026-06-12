@@ -166,15 +166,10 @@ export function buildOrganizationJsonLd() {
     address: [
       {
         "@type": "PostalAddress",
-        addressLocality: "Coral Springs",
-        addressRegion: "FL",
-        addressCountry: "US",
-      },
-      {
-        "@type": "PostalAddress",
-        addressLocality: "Dallas",
-        addressRegion: "TX",
-        addressCountry: "US",
+        streetAddress: "D710, Titanium Business Park, Near Makarba Underpass, Makarba",
+        addressLocality: "Ahmedabad",
+        postalCode: "380007",
+        addressCountry: "IN",
       },
     ],
     contactPoint: {

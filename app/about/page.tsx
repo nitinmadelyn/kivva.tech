@@ -53,7 +53,7 @@ const VALUES = [
 const MILESTONES = [
   { year: "2005", event: "Founded in Ahmedabad, India as a custom software consultancy." },
   { year: "2010", event: "Expanded to serve US and European clients. First 100 engineers hired." },
-  { year: "2016", event: "Opened US offices in Florida and Texas. 500+ global clients reached." },
+  { year: "2016", event: "Scaled to 200+ engineers. Crossed 500 global clients across 10+ countries." },
   { year: "2019", event: "Launched dedicated AI/ML practice. First LLM and computer vision projects shipped." },
   { year: "2022", event: "360+ active clients across 15+ countries. Shopify Partner and AWS Certified." },
   { year: "2024", event: "Full AI Engineering division launched. Agentic systems, RAG, and custom model work at scale." },
