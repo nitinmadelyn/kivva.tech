@@ -414,7 +414,7 @@ export const CASE_STUDIES: Record<string, CaseStudyConfig> = {
     industryHref: "/industries/data-analytics",
     badge: "Data SaaS",
     client: "Dexi.io",
-    logo: "/logos/company-5.svg",
+    logo: "/logos/company-2.webp",
     title: "How Dexi.io Cut Cloud Execution Costs by 60% Without Sacrificing Scale",
     subtitle: "Rebuilt the robot builder UX, elastic execution layer, and BI connector suite for a cloud-native data extraction platform used by enterprises worldwide.",
     description:
@@ -748,6 +748,337 @@ export const CASE_STUDIES: Record<string, CaseStudyConfig> = {
     metaDescription: "How KivvaTech rebuilt Stashly's bank integrations, redesigned mobile onboarding, built adaptive savings automation, and delivered SOC 2 Type II certification.",
     metaKeywords: ["Stashly case study", "fintech development", "savings automation", "SOC 2 certification", "mobile banking app development"],
     path: "/case-studies/stashly",
+  },
+
+  // ─── Logibee ──────────────────────────────────────────────────────────────────
+
+  logibee: {
+    slug: "logibee",
+    industry: "Logistics & Supply Chain",
+    industryHref: "/industries/logistics",
+    badge: "Logistics",
+    client: "Logibee",
+    logo: "/logos/company-7.webp",
+    title: "Changing the Face of Logistics with Advanced Automations",
+    subtitle: "A unified AI-powered logistics platform replacing manual carrier coordination with real-time tracking, predictive analytics, and automated workflows from a single operations dashboard.",
+    description:
+      "LogiBee.ai is an advanced logistics management platform built for mid-market e-commerce brands and 3PL operators in India. It centralizes carrier integrations, route optimization, inventory management, and demand forecasting into a single AI-powered operations layer. Before KivvaTech, every coordination task was manual — carrier status was tracked via phone calls, delivery exceptions were discovered after the fact, and operations teams had no live view of the network.",
+    stats: [
+      { value: "5",    label: "integrated feature modules" },
+      { value: "2",    label: "platforms — Android app + web portal" },
+      { value: "4",    label: "core operational challenges resolved" },
+      { value: "Live", label: "GPS-based pick-up and delivery tracking" },
+    ],
+    challenge: {
+      overview:
+        "Logistics operations were plagued by inefficiencies that prevented meeting customer expectations and controlling costs. Teams faced significant challenges tracking shipments accurately, optimizing delivery routes, and managing inventory levels — all through manual, error-prone processes that slowed response times and eroded carrier relationships.",
+      points: [
+        {
+          title: "Real-Time Data Integration",
+          body: "Ensuring seamless real-time data integration across multiple carriers, warehouses, and delivery partners was the foundational technical challenge — fragmented data sources produced inconsistent status updates and visibility gaps that operations teams could not act on.",
+        },
+        {
+          title: "Accurate Predictive Analytics",
+          body: "Implementing predictive analytics that could accurately forecast demand, detect delays, and optimize routes in dynamic logistics conditions required handling large, noisy datasets with high reliability. Off-the-shelf tools produced too many false positives to be actionable.",
+        },
+        {
+          title: "User-Friendly Interface for Diverse Teams",
+          body: "Designing an interface that warehouse managers, logistics partners, and field staff could all use effectively — despite widely varying technical skill levels — demanded rigorous user-centered design across both mobile and web surfaces.",
+        },
+        {
+          title: "Cross-Platform Compatibility",
+          body: "Achieving full operational parity across Android mobile for field teams and a web portal for management — while maintaining consistent data sync and real-time updates across both platforms — required careful architecture planning and a shared data model.",
+        },
+      ],
+    },
+    solution: {
+      overview:
+        "We built a real-time logistics platform with predictive analytics, automated workflows, and a centralized operations dashboard — enabling data-driven decision-making and dramatically improved logistics performance across carriers, routes, and inventory. The platform shipped across both Android mobile and a web management portal.",
+      steps: [
+        {
+          step: "01",
+          title: "User Authentication and Profile Management",
+          body: "A secure multi-role authentication system supporting password and OTP-based login, password recovery, and comprehensive profile management for all platform user types — admins, logistics partners, and field staff.",
+        },
+        {
+          step: "02",
+          title: "Dashboard and Content Management",
+          body: "A centralized operations dashboard for super admins with full platform visibility, combined with a CMS for managing static content including terms, documentation, and partner-facing pages. Real-time data refresh across all dashboard widgets.",
+        },
+        {
+          step: "03",
+          title: "Retailer and Partner Management",
+          body: "A comprehensive management module for adding, editing, and overseeing online retailers and logistics partners — giving operations teams full control over the partner ecosystem with performance visibility and SLA monitoring from one place.",
+        },
+        {
+          step: "04",
+          title: "Order, Parcel and Trip Management",
+          body: "End-to-end order lifecycle management covering bulk upload, tracking, trip assignment, and fleet operations — replacing manual spreadsheet workflows with automated, real-time management and exception handling for failed or delayed deliveries.",
+        },
+        {
+          step: "05",
+          title: "Real-Time Tracking and Notifications",
+          body: "Live GPS-based tracking for all pick-ups and deliveries, combined with an automated notification system ensuring customers, partners, and operations teams receive timely updates at every delivery milestone. Delivery confirmation and proof-of-delivery capture built in.",
+        },
+      ],
+    },
+    results: [
+      {
+        metric: "5",
+        metricLabel: "end-to-end modules",
+        body: "Five purpose-built modules covering authentication, operations, partner management, order lifecycle, and live tracking — replacing a patchwork of manual processes and disconnected tools with a single integrated platform.",
+      },
+      {
+        metric: "2",
+        metricLabel: "platforms delivered",
+        body: "Android mobile app for field and driver operations, and a web portal for management and admin workflows — sharing a single data model and keeping all stakeholders on the same real-time view of the logistics network.",
+      },
+      {
+        metric: "4",
+        metricLabel: "core challenges resolved",
+        body: "Data integration, predictive analytics, user experience, and cross-platform compatibility — each challenge resolved through deliberate architecture decisions rather than workarounds, ensuring the platform could scale as the operator network grew.",
+      },
+      {
+        metric: "Live",
+        metricLabel: "GPS tracking",
+        body: "Real-time GPS-based pick-up and delivery visibility replaced phone-based status checks entirely. Operations teams gained a live view of the full delivery network for the first time, enabling proactive exception management instead of reactive firefighting.",
+      },
+    ],
+    techStack: [
+      { label: "Frontend", items: ["Angular", "TypeScript", "Real-time WebSocket", "Responsive UI"] },
+      { label: "Mobile", items: ["Android Native", "GPS SDK", "Offline-first sync", "Push Notifications"] },
+      { label: "Backend", items: ["Java Spring Boot", "PostgreSQL", "Redis Cache", "REST APIs"] },
+      { label: "Analytics", items: ["Predictive demand engine", "Route optimization", "BI dashboard", "Event pipeline"] },
+    ],
+    relatedCaseStudies: [
+      { label: "Navig8 Connect — Maritime fleet tracking", href: "/case-studies/navig8", tag: "Logistics" },
+      { label: "Before You Buy — Field operations platform", href: "/case-studies/beforeyoubuy", tag: "PropTech" },
+      { label: "Dexi.io — Data automation platform", href: "/case-studies/dexi", tag: "Data SaaS" },
+    ],
+    metaTitle: "Logibee Case Study — AI-Powered Logistics Platform with Real-Time Tracking",
+    metaDescription: "How KivvaTech built a unified AI logistics management platform for Logibee — covering carrier integrations, route optimization, real-time GPS tracking, and automated order lifecycle management.",
+    metaKeywords: ["Logibee case study", "logistics platform development", "AI supply chain", "real-time delivery tracking", "3PL software development"],
+    path: "/case-studies/logibee",
+  },
+
+  // ─── Ivira ────────────────────────────────────────────────────────────────────
+
+  ivira: {
+    slug: "ivira",
+    industry: "Healthcare Technology",
+    industryHref: "/industries/healthcare",
+    badge: "HealthTech",
+    client: "Ivira",
+    title: "Remodeling Healthcare Through Digital Care Programs",
+    subtitle: "A secure, HIPAA-aware dual-panel web portal where pharmacists and care managers maintain patient records, assign remote care programs, and view real-time device readings from one platform.",
+    description:
+      "Ivira is a US-based digital health company delivering Remote Patient Monitoring (RPM) and Remote Therapeutic Monitoring (RTM) programs through pharmacies and care management teams. Before KivvaTech, patient data was managed across disconnected systems — device readings were logged manually, care program assignment required staff to toggle between multiple tools, and there was no administrator panel for access control or compliance reporting.",
+    stats: [
+      { value: "2",    label: "portals — clinical user + system admin" },
+      { value: "4",    label: "security layers implemented" },
+      { value: "3+",   label: "device types integrated" },
+      { value: "Live", label: "real-time device readings in portal" },
+    ],
+    challenge: {
+      overview:
+        "Pharmacists and care managers needed a single portal to maintain patient records, assign care programs, view blood pressure, pulse, and pill cap readings from connected devices, and create clinical encounters — all while meeting strict data privacy requirements. The fragmented tooling in place was creating compliance risk and adding hours of administrative work per clinician per day.",
+      points: [
+        {
+          title: "Patient Data Privacy and Security",
+          body: "Ensuring the privacy and security of patient data was the highest-priority challenge. Any breach could result in HIPAA violations and the permanent loss of patient trust — requiring advanced encryption, multi-factor authentication, and role-based access control from day one of the project.",
+        },
+        {
+          title: "Integrating Multi-Source Health Data",
+          body: "Providing a comprehensive view of each patient's health required integrating data from medical devices, electronic health records, and wearables — each with different data formats, connection protocols, and update frequencies. Normalizing this data into a unified patient view was a core engineering challenge.",
+        },
+        {
+          title: "Scalable Infrastructure for a Growing Patient Base",
+          body: "The portal needed to accommodate an increasing number of patients and clinical users over time without performance degradation — requiring cloud-based infrastructure that could scale elastically with demand and maintain high availability for clinical workflows.",
+        },
+        {
+          title: "Accessibility for Non-Technical Users",
+          body: "The portal needed to be intuitive for elderly patients and users with limited technical skills — without sacrificing the functional depth required by pharmacists, care managers, and system administrators managing complex multi-program patient records.",
+        },
+      ],
+    },
+    solution: {
+      overview:
+        "We built a dual-panel healthcare portal: a care manager and pharmacist panel for patient management and device readings, and a separate system administrator panel for access management, system configuration, and reporting — with security, scalability, and usability as foundational requirements across both surfaces.",
+      steps: [
+        {
+          step: "01",
+          title: "Security and Compliance Architecture",
+          body: "Advanced security features including AES-256 encryption for data at rest and in transit, two-factor authentication for all clinical user accounts, role-based access control separating care manager, pharmacist, and admin views, and a regular security audit process for ongoing vulnerability management.",
+        },
+        {
+          step: "02",
+          title: "Multi-Source Health Data Integration",
+          body: "API-based integration with medical devices — blood pressure monitors, pill cap trackers, and wearables — with standardized data format alignment for consistent cross-source readings. Real-time device reading display within the patient portal with data validation and anomaly flagging for clinical accuracy.",
+        },
+        {
+          step: "03",
+          title: "Cloud-Based Scalable Infrastructure",
+          body: "Cloud infrastructure with elastic scaling for growing patient volume, high availability architecture for clinical uptime requirements, database partitioning for large patient record sets, and performance monitoring with automated alerts. Built to accommodate multi-pharmacy expansion without re-architecture.",
+        },
+        {
+          step: "04",
+          title: "Patient Enrollment and Care Program Assignment",
+          body: "Streamlined patient enrollment with demographic capture, care program assignment (RPM and RTM), and account activation in a single workflow. Care managers can assign programs, set monitoring thresholds, and view reading histories directly from the patient profile.",
+        },
+        {
+          step: "05",
+          title: "System Administrator Panel",
+          body: "A separate admin panel for user access management, system configuration, and compliance reporting. Administrators manage pharmacist and care manager accounts, set system-wide permissions, generate regulatory reports, and monitor platform health — fully isolated from the clinical user interface.",
+        },
+      ],
+    },
+    results: [
+      {
+        metric: "2",
+        metricLabel: "portals delivered",
+        body: "A clinical user panel for pharmacists and care managers, and a separate system administrator panel — each purpose-built for its users, with the security and access controls required for a HIPAA-aware healthcare environment.",
+      },
+      {
+        metric: "4",
+        metricLabel: "security layers",
+        body: "Encryption at rest and in transit, two-factor authentication, role-based access control, and an ongoing security audit process — all implemented from the start of the project, not bolted on at the end.",
+      },
+      {
+        metric: "3+",
+        metricLabel: "device types integrated",
+        body: "Blood pressure monitors, pulse oximeters, and smart pill cap trackers all integrated via API — with normalized data formats ensuring consistent real-time reading display across all device types within the patient portal.",
+      },
+      {
+        metric: "Live",
+        metricLabel: "device readings",
+        body: "Real-time device reading display within the clinical portal replaced manual logging entirely. Care managers and pharmacists can see patient readings as they happen, enabling proactive care decisions rather than retrospective review.",
+      },
+    ],
+    techStack: [
+      { label: "Frontend", items: ["ReactJS", "TypeScript", "Responsive UI", "Accessibility-first"] },
+      { label: "Backend", items: ["Node.js", "MongoDB", "PostgreSQL", "REST APIs"] },
+      { label: "Integrations", items: ["Medical Device APIs", "EHR data connectors", "Wearable SDKs", "Notification service"] },
+      { label: "Security", items: ["AES-256 encryption", "2FA", "RBAC", "HIPAA compliance"] },
+    ],
+    relatedCaseStudies: [
+      { label: "Stashly — Fintech platform with SOC 2 certification", href: "/case-studies/stashly", tag: "Fintech" },
+      { label: "Acquire.io — Customer engagement platform", href: "/case-studies/acquire", tag: "SaaS" },
+      { label: "Logibee — AI-powered logistics management", href: "/case-studies/logibee", tag: "Logistics" },
+    ],
+    metaTitle: "Ivira Case Study — HIPAA-Aware Digital Care Portal for Pharmacists and Care Managers",
+    metaDescription: "How KivvaTech built a secure dual-panel healthcare portal for Ivira — covering remote patient monitoring, medical device integration, role-based access, and system administration.",
+    metaKeywords: ["Ivira case study", "healthcare portal development", "remote patient monitoring", "RPM software", "HIPAA web portal"],
+    path: "/case-studies/ivira",
+  },
+
+  // ─── Navig8 Connect ───────────────────────────────────────────────────────────
+
+  navig8: {
+    slug: "navig8",
+    industry: "Maritime & Shipping",
+    industryHref: "/industries/logistics",
+    badge: "Maritime Tech",
+    client: "Navig8 Connect",
+    title: "Centralized Vessel Tracking with Real-Time Data Sync",
+    subtitle: "A highly secure maritime management platform with process-level role-based access control, real-time multi-user data synchronization without page reloads, and 50M+ record capacity across vessel, voyage, and fixture management.",
+    description:
+      "Navig8 Connect is a UAE-based maritime operations platform serving shipping companies and fleet operators across the Middle East and globally. The platform centralizes fixture management, vessel data, real-time vessel tracking, voyage management, and business intelligence analytics. Before KivvaTech, the operator was managing fragmented data across disconnected systems — with no real-time sync between users, no process-level permission controls, and database architecture that could not scale to the required data volume.",
+    stats: [
+      { value: "50M+", label: "maritime records under management" },
+      { value: "5",    label: "core feature modules" },
+      { value: "Live", label: "real-time data sync — no page reloads" },
+      { value: "Zero", label: "unauthorized access risk via RBAC" },
+    ],
+    challenge: {
+      overview:
+        "Navig8 Connect required a highly secure maritime platform with role-based access control, real-time data synchronization between users without page reloads, and the capability to manage up to 50 million records across vessel tracking, voyages, and fixture management. Each of these requirements pushed beyond standard web application architecture into enterprise-grade engineering territory.",
+      points: [
+        {
+          title: "Advanced Role-Based Security",
+          body: "The platform required the highest level of security with role-based authentication controlling access at the individual process level — not just page-level access control. Every function needed to enforce permission boundaries for each user role, with audit logging for all platform actions.",
+        },
+        {
+          title: "Real-Time Data Management at Scale",
+          body: "Efficiently managing all collected and processed data in real-time across concurrent users — without data conflicts, latency issues, or stale reads — was a foundational requirement. Users needed to see each other's updates instantly without triggering full page reloads.",
+        },
+        {
+          title: "Database Architecture for 50 Million Records",
+          body: "The requirement to store and query up to 50 million vessel and maritime records demanded a well-structured database design with careful schema planning, index strategy, and partitioning to maintain query performance at full scale — not just at launch volume.",
+        },
+        {
+          title: "Reliable Index Management and Partitioning",
+          body: "A robust database with efficient index management and partitioning was required to ensure consistent performance across the full data volume — preventing query degradation as the platform's maritime data grew over time with new vessels and voyages.",
+        },
+      ],
+    },
+    solution: {
+      overview:
+        "We built a security-first maritime management platform with advanced role-based authentication, real-time data sync without page reloads, a high-performance database architecture for 50M+ records, and dynamic graphical vessel tracking — giving every team the data they need, instantly and securely across five integrated modules.",
+      steps: [
+        {
+          step: "01",
+          title: "Fixture Board Management",
+          body: "A centralized fixture management system with real-time updates across all users, structured fixture workflow from negotiation to confirmation, role-gated access to fixture details by user permission level, and a full audit trail for all fixture changes and approvals.",
+        },
+        {
+          step: "02",
+          title: "Vessel Data Management",
+          body: "Complete vessel profile management with specification data, document management for certificates and compliance records, a searchable vessel database with advanced filter capabilities, and real-time vessel data updates across all connected users the moment records are changed.",
+        },
+        {
+          step: "03",
+          title: "Real-Time Vessel Tracking",
+          body: "Live vessel position monitoring with real-time location updates, dynamic graphical visualization on interactive maps, vessel status and speed monitoring with historical track playback, and an alert system for vessels deviating from expected routes or schedules.",
+        },
+        {
+          step: "04",
+          title: "Voyage Tracking and Management",
+          body: "End-to-end voyage lifecycle management from planning through execution — covering port call scheduling, real-time voyage progress tracking against planned itinerary, cargo and bunker management, and voyage performance reporting with actual versus planned comparison.",
+        },
+        {
+          step: "05",
+          title: "Roles and Permission Management",
+          body: "A fully customizable role and permission system with granular process-level permission control per role, custom role creation and modification by administrators, permission inheritance and role hierarchy support, and access audit logs for compliance and security monitoring.",
+        },
+      ],
+    },
+    results: [
+      {
+        metric: "50M+",
+        metricLabel: "records managed",
+        body: "Vessel, voyage, and fixture data at full operational scale — managed with consistent query performance through strategic database partitioning and index management designed for the long-term data growth trajectory of the platform.",
+      },
+      {
+        metric: "5",
+        metricLabel: "feature modules",
+        body: "Fixture board, vessel data management, real-time vessel tracking, voyage lifecycle management, and granular roles and permissions — covering the complete scope of maritime operations management from a single integrated platform.",
+      },
+      {
+        metric: "Live",
+        metricLabel: "data sync",
+        body: "Multi-user real-time data synchronization without page reloads replaced a disconnected, refresh-dependent workflow. All users see the same live picture of the fleet simultaneously — critical for operational decisions during time-sensitive maritime events.",
+      },
+      {
+        metric: "Zero",
+        metricLabel: "unauthorized access",
+        body: "Process-level role-based permission enforcement with full audit logging eliminated unauthorized access risk. Every action on the platform is permission-checked and logged — giving compliance teams the visibility they need for maritime security standards.",
+      },
+    ],
+    techStack: [
+      { label: "Frontend", items: ["Angular", "Real-time WebSocket sync", "Interactive mapping", "Role-aware UI"] },
+      { label: "Mobile", items: ["React Native", "Cross-platform", "Live vessel tracking", "Offline resilience"] },
+      { label: "Backend", items: [".NET Core", "MySQL", "Table partitioning", "Index management"] },
+      { label: "Security", items: ["Process-level RBAC", "Audit logging", "Session management", "Permission hierarchy"] },
+    ],
+    relatedCaseStudies: [
+      { label: "Logibee — AI-powered logistics management", href: "/case-studies/logibee", tag: "Logistics" },
+      { label: "Import.io — Enterprise data extraction platform", href: "/case-studies/import-io", tag: "Data SaaS" },
+      { label: "Dexi.io — Cloud-native data automation", href: "/case-studies/dexi", tag: "Data SaaS" },
+    ],
+    metaTitle: "Navig8 Connect Case Study — Maritime Fleet Management with 50M+ Records and Real-Time Sync",
+    metaDescription: "How KivvaTech built a secure maritime management platform for Navig8 Connect — covering vessel tracking, fixture board, voyage management, and process-level RBAC at 50M+ record scale.",
+    metaKeywords: ["Navig8 Connect case study", "maritime platform development", "vessel tracking software", "fleet management system", "real-time maritime data"],
+    path: "/case-studies/navig8",
   },
 
 };

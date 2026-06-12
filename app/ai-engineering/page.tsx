@@ -16,7 +16,7 @@ import { NAV_ITEMS } from "@/lib/nav-data";
 export const metadata: Metadata = buildMetadata({
   title: "AI Engineering",
   description:
-    "End-to-end AI engineering — strategy, custom model development, RAG systems, agentic AI, automation, and production deployment. 360+ projects delivered globally.",
+    "End-to-end AI engineering — strategy, custom model development, RAG systems, agentic AI, automation, and production deployment. 480+ projects delivered globally.",
   path: "/ai-engineering",
   keywords: [
     "AI engineering services",

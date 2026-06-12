@@ -91,7 +91,7 @@ export const AI_ENGINEERING_PAGES: Record<string, SubPageConfig> = {
     stats: [
       { value: "2 weeks", label: "To first POC" },
       { value: "90%", label: "POC-to-production rate" },
-      { value: "360+", label: "Completed projects" },
+      { value: "480+", label: "Completed projects" },
       { value: "30+", label: "Countries" },
     ],
     capabilities: [
@@ -345,7 +345,7 @@ export const AI_ENGINEERING_PAGES: Record<string, SubPageConfig> = {
     title: "AI Infrastructure & Deployment",
     subtitle: "Ship AI to production. Scale it without surprises.",
     description:
-      "Building a great model is only half the problem. Getting it to production reliably — with low latency, high availability, cost control, and zero vendor lock-in — is where most teams struggle. We've deployed AI infrastructure for 360+ projects.",
+      "Building a great model is only half the problem. Getting it to production reliably — with low latency, high availability, cost control, and zero vendor lock-in — is where most teams struggle. We've deployed AI infrastructure for 480+ projects.",
     capabilities: [
       { icon: IC.server, title: "Model Serving Infrastructure", body: "GPU-optimised serving with vLLM, TGI, or Triton. Batching, quantisation, and caching strategies that cut inference cost by 60–80%." },
       { icon: IC.cloud, title: "Private Cloud & On-Premise", body: "Deploy models on your own cloud account or on-prem hardware. Full data residency, no third-party API dependency." },
@@ -466,7 +466,7 @@ export const SERVICES_PAGES: Record<string, SubPageConfig> = {
     description:
       "We design, build, and ship custom software that fits your exact requirements — from SaaS platforms and enterprise systems to customer portals and internal tools. Our teams own the full stack: product, design, engineering, and QA.",
     stats: [
-      { value: "360+", label: "Completed projects" },
+      { value: "480+", label: "Completed projects" },
       { value: "15+", label: "Years experience" },
       { value: "5 days", label: "Team onboarded" },
       { value: "30+", label: "Countries served" },
@@ -772,7 +772,7 @@ export const SERVICES_PAGES: Record<string, SubPageConfig> = {
       { label: "Integrations", items: ["Odoo ERP", "Salesforce", "Klaviyo", "Algolia"] },
     ],
     stats: [
-      { value: "360+", label: "Completed projects" },
+      { value: "480+", label: "Completed projects" },
       { value: "15+", label: "Years experience" },
       { value: "48h", label: "Proposal turnaround" },
       { value: "5 days", label: "Team onboarding" },

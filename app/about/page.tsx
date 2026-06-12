@@ -13,7 +13,7 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = buildMetadata({
   title: "About KivvaTech",
   description:
-    "KivvaTech is a global AI and software engineering company with 15+ years of experience, 360+ clients across 15+ countries. We build AI products that ship and scale.",
+    "KivvaTech is a global AI and software engineering company with 15+ years of experience, 480+ clients across 15+ countries. We build AI products that ship and scale.",
   path: "/about",
   keywords: ["about KivvaTech", "AI software company", "software engineering firm", "offshore development company"],
 });
@@ -55,7 +55,7 @@ const MILESTONES = [
   { year: "2010", event: "Expanded to serve US and European clients. First 100 engineers hired." },
   { year: "2016", event: "Scaled to 200+ engineers. Crossed 500 global clients across 10+ countries." },
   { year: "2019", event: "Launched dedicated AI/ML practice. First LLM and computer vision projects shipped." },
-  { year: "2022", event: "360+ active clients across 15+ countries. Shopify Partner and AWS Certified." },
+  { year: "2022", event: "480+ active clients across 15+ countries. Shopify Partner and AWS Certified." },
   { year: "2024", event: "Full AI Engineering division launched. Agentic systems, RAG, and custom model work at scale." },
 ];
 
@@ -130,7 +130,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { value: "15+", label: "Years in operation" },
-                  { value: "360+", label: "Completed projects" },
+                  { value: "480+", label: "Completed projects" },
                   { value: "500+", label: "Engineers globally" },
                   { value: "3+ yrs", label: "Avg. client relationship" },
                 ].map(({ value, label }) => (

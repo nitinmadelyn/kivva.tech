@@ -409,6 +409,24 @@ export const NAV_ITEMS: NavItem[] = [
             href: "/case-studies/stashly",
             icon: ICONS.briefcase,
           },
+          {
+            label: "Logibee",
+            description: "AI-powered logistics platform with live GPS tracking.",
+            href: "/case-studies/logibee",
+            icon: ICONS.truck,
+          },
+          {
+            label: "Ivira",
+            description: "HIPAA-aware digital care portal for pharmacists.",
+            href: "/case-studies/ivira",
+            icon: ICONS.bolt,
+          },
+          {
+            label: "Navig8 Connect",
+            description: "50M+ maritime records with real-time vessel tracking.",
+            href: "/case-studies/navig8",
+            icon: ICONS.chart,
+          },
         ],
       },
     ],
@@ -424,7 +442,7 @@ export const NAV_ITEMS: NavItem[] = [
         items: [
           {
             label: "About KivvaTech",
-            description: "15+ years, 360+ clients, 15+ countries.",
+            description: "15+ years, 480+ clients, 15+ countries.",
             href: "/about",
             icon: ICONS.info,
           },

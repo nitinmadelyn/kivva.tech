@@ -24,7 +24,7 @@ interface MetadataOverrides {
 
 const DEFAULT_TITLE = "KivvaTech — AI Engineering & Enterprise Software Company";
 const DEFAULT_DESCRIPTION =
-  "Enterprise AI solutions, custom AI development, and enterprise software engineering. Trusted by 360+ companies across 15+ countries since 2006. Pre-vetted teams. Onboard in 5 days.";
+  "Enterprise AI solutions, custom AI development, and enterprise software engineering. Trusted by 480+ companies across 15+ countries since 2006. Pre-vetted teams. Onboard in 5 days.";
 const DEFAULT_KEYWORDS = [
   "AI engineering company",
   "hire AI engineers",

@@ -276,7 +276,7 @@ export const HIRE_DEV_ROLES: Record<string, HireDevRole> = {
       { value: "5 days", label: "To onboard" },
       { value: "40–60%", label: "Cost vs local hiring" },
       { value: "72h", label: "Profiles delivered" },
-      { value: "360+", label: "Completed projects" },
+      { value: "480+", label: "Completed projects" },
     ],
     skills: [
       { category: "LLM & Generative AI", items: ["LangChain", "LlamaIndex", "RAG", "Fine-tuning", "Prompt engineering", "LangGraph"] },
@@ -527,7 +527,7 @@ export const HIRE_DEV_ROLES: Record<string, HireDevRole> = {
     stats: [
       { value: "40–60%", label: "Cost saving vs local" },
       { value: "5 days", label: "To onboard" },
-      { value: "360+", label: "Completed projects" },
+      { value: "480+", label: "Completed projects" },
       { value: "NDA", label: "IP protection available" },
     ],
     skills: [

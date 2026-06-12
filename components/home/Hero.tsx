@@ -57,7 +57,7 @@ export default function Hero() {
         {/* ── Sub-copy ─────────────────────────────────────────────────────── */}
         <p className="mt-5 text-base sm:text-lg text-text-dim max-w-xl mx-auto leading-relaxed">
           Pre-vetted AI engineers, cloud architects, and full-stack teams.
-          Onboard in 5 days. Trusted by 360+ companies across 15+ countries.
+          Onboard in 5 days. Trusted by 480+ companies across 15+ countries.
         </p>
 
         {/* ── CTAs ─────────────────────────────────────────────────────────── */}

@@ -11,7 +11,7 @@ export const SITE = {
   name: "KivvaTech",
   tagline: "Ship AI products. Scale to any market.",
   description:
-    "Pre-vetted AI engineers, cloud architects, and full-stack teams. Onboard in 5 days. Trusted by 360+ companies across 15+ countries.",
+    "Pre-vetted AI engineers, cloud architects, and full-stack teams. Onboard in 5 days. Trusted by 480+ companies across 15+ countries.",
   url: "https://www.kivva.tech",
   email: "coffee@kivva.tech",
   phone: "+91 97262 59232",
@@ -31,7 +31,7 @@ export const SITE = {
 // ─── Hero stats bar ───────────────────────────────────────────────────────────
 
 export const HERO_STATS: Array<{ value: string; label: string }> = [
-  { value: "360+", label: "Completed projects" },
+  { value: "480+", label: "Completed projects" },
   { value: "15+", label: "Years experience" },
   { value: "5 days", label: "To onboard" },
   { value: "30+", label: "Countries" },
