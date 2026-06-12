@@ -105,9 +105,8 @@ function ServiceCard({ service }: { service: Service }) {
       <Link
         href={service.href}
         className="inline-flex items-center gap-1.5 mt-5 text-xs text-brand-blue opacity-0 group-hover:opacity-100 transition-opacity"
-        aria-label={`Learn more about ${service.title}`}
       >
-        Learn more
+        Learn more<span className="sr-only"> about {service.title}</span>
         <svg
           className="w-3 h-3"
           fill="none"

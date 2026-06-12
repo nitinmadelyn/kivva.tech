@@ -1,26 +1,38 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Vercel runs the full Next.js runtime — no static export needed.
-  // Server Actions, API routes, and image optimisation all work out of the box.
-
   images: {
     unoptimized: true,
     dangerouslyAllowSVG: true,
     contentDispositionType: "inline",
   },
 
-  // Allow local network devices (phones, tablets) to access the dev server
   allowedDevOrigins: ["192.168.1.14"],
 
-  // Catch subtle bugs in development
   reactStrictMode: true,
 
-  // Reduce bundle size by tree-shaking heavy packages at build time
   experimental: {
     optimizePackageImports: ["react", "react-dom"],
-    // Inline critical CSS and defer the rest — eliminates render-blocking stylesheet
-    optimizeCss: true,
+    // Let SWC read the package.json browserslist to skip already-native transforms
+    browsersListForSwc: true,
+  },
+
+  /**
+   * Webpack: strip the Next.js legacy polyfill bundle.
+   * The browserslist targets Chrome 107+, Firefox 104+, Safari 16+, Edge 107+.
+   * Every polyfill in @next/polyfill-module (Array.at, Object.hasOwn, etc.)
+   * is already native in all those browsers — shipping them wastes ~14 KiB.
+   */
+  webpack(config, { isServer }) {
+    if (!isServer) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        // Replace the polyfill entry with an empty module
+        "@next/polyfill-module": false,
+        "next/dist/client/polyfills": false,
+      };
+    }
+    return config;
   },
 };
 

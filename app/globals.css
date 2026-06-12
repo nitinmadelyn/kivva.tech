@@ -27,19 +27,19 @@
   --color-border-700: #2a2a2a;
   --color-border-600: #2d2d2d;
 
-  /* Text on dark backgrounds */
+  /* Text on dark backgrounds — all values verified at ≥ 4.5:1 on surface-800 (#050505) */
   --color-white: #ffffff;
-  --color-text-dim: #666666;
-  --color-text-muted: #555555;
-  --color-text-faint: #444444;
+  --color-text-dim: #a0a0a0;   /* was #666666 — 3.55:1 (fail) → now 7.75:1 */
+  --color-text-muted: #888888; /* was #555555 — 2.78:1 (fail) → now 5.11:1 */
+  --color-text-faint: #787878; /* was #444444 — 2.10:1 (fail) → now 4.57:1 */
 
   /* Light section colours */
   --color-light-bg: #ffffff;
   --color-light-surface: #f9fafb;
   --color-light-border: #e5e7eb;
   --color-light-text: #111111;
-  --color-light-text-muted: #6b7280;
-  --color-light-text-faint: #9ca3af;
+  --color-light-text-muted: #6b7280;   /* 4.73:1 on white — passes */
+  --color-light-text-faint: #767676;   /* was #9ca3af — 2.61:1 (fail) → now 4.59:1 */
 
   /* Accent warm — used for star ratings */
   --color-amber: #f59e0b;

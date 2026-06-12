@@ -48,7 +48,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
       aria-label={`Testimonial from ${testimonial.name}`}
     >
       {/* Stars */}
-      <div aria-label="5 out of 5 stars" className="flex gap-0.5 mb-4">
+      <div role="img" aria-label="5 out of 5 stars" className="flex gap-0.5 mb-4">
         {Array.from({ length: 5 }).map((_, i) => (
           <svg
             key={i}

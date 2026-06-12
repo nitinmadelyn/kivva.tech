@@ -34,7 +34,7 @@ export const HERO_STATS: Array<{ value: string; label: string }> = [
   { value: "480+", label: "Completed projects" },
   { value: "15+", label: "Years experience" },
   { value: "5 days", label: "To onboard" },
-  { value: "30+", label: "Countries" },
+  { value: "15+", label: "Countries" },
 ];
 
 // ─── Navigation ───────────────────────────────────────────────────────────────
@@ -77,7 +77,7 @@ export const CERTIFICATIONS = [
 export const CLIENT_LOGOS: Array<{ name: string; file: string; width: number; height: number }> = [
   { name: "Company 1", file: "company-1.svg",  width: 100, height: 32 },
   { name: "Company 2", file: "company-2.webp", width: 100, height: 32 },
-  { name: "Company 3", file: "company-3.webp", width: 100, height: 32 },
+  { name: "Company 3", file: "company-3.webp", width: 160, height: 32 },
   { name: "Company 4", file: "company-4.svg",  width: 100, height: 32 },
   { name: "Company 5", file: "company-5.svg",  width: 100, height: 32 },
   { name: "Company 6", file: "company-6.avif", width: 80, height: 24 },

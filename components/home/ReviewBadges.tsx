@@ -49,10 +49,11 @@ export default function ReviewBadges() {
   );
 }
 
-const PLATFORM_LOGOS: Record<string, { src: string; height: number }> = {
-  Clutch:     { src: "/logos/clutch-logo.png",     height: 36 },
-  Google:     { src: "/logos/google-logo.png",     height: 47 },
-  Trustpilot: { src: "/logos/trustpilot-logo.png", height: 80 },
+// width/height = 2× display size (retina-ready). Prevents CLS (no width → browser can't reserve space).
+const PLATFORM_LOGOS: Record<string, { src: string; w: number; h: number; displayH: number }> = {
+  Clutch:     { src: "/logos/clutch-logo.webp",     w: 252, h: 72,  displayH: 36 },
+  Google:     { src: "/logos/google-logo.webp",     w: 226, h: 94,  displayH: 47 },
+  Trustpilot: { src: "/logos/trustpilot-logo.webp", w: 284, h: 160, displayH: 80 },
 };
 
 function PlatformLogo({ platform }: { platform: string }) {
@@ -63,7 +64,9 @@ function PlatformLogo({ platform }: { platform: string }) {
       <img
         src={logo.src}
         alt={platform}
-        style={{ height: `${logo.height}px`, width: "auto" }}
+        width={logo.w}
+        height={logo.h}
+        style={{ height: `${logo.displayH}px`, width: "auto" }}
         loading="lazy"
         decoding="async"
       />
@@ -76,8 +79,10 @@ function ShopifyPartnerLogo() {
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src="/logos/shopify-partner.png"
+      src="/logos/shopify-partner.webp"
       alt="Shopify Partner"
+      width={348}
+      height={96}
       style={{ height: "48px", width: "auto" }}
       loading="lazy"
       decoding="async"
@@ -89,8 +94,10 @@ function ShopifyPlusPartnerLogo() {
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src="/logos/shopify-plus-partner.png"
+      src="/logos/shopify-plus-partner.webp"
       alt="Shopify Plus Partner"
+      width={322}
+      height={96}
       style={{ height: "48px", width: "auto" }}
       loading="lazy"
       decoding="async"

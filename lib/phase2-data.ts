@@ -92,7 +92,7 @@ export const AI_ENGINEERING_PAGES: Record<string, SubPageConfig> = {
       { value: "2 weeks", label: "To first POC" },
       { value: "90%", label: "POC-to-production rate" },
       { value: "480+", label: "Completed projects" },
-      { value: "30+", label: "Countries" },
+      { value: "15+", label: "Countries" },
     ],
     capabilities: [
       { icon: IC.brain, title: "AI Opportunity Assessment", body: "We audit your current stack, data assets, and processes to surface the highest-ROI AI use cases. Prioritised by effort, impact, and strategic alignment." },
@@ -469,7 +469,7 @@ export const SERVICES_PAGES: Record<string, SubPageConfig> = {
       { value: "480+", label: "Completed projects" },
       { value: "15+", label: "Years experience" },
       { value: "5 days", label: "Team onboarded" },
-      { value: "30+", label: "Countries served" },
+      { value: "15+", label: "Countries served" },
     ],
     capabilities: [
       { icon: IC.code, title: "SaaS Platform Development", body: "Multi-tenant SaaS products with billing, roles, onboarding flows, and analytics — built to scale from day one." },
