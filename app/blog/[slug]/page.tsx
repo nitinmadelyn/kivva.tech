@@ -31,6 +31,10 @@ export async function generateMetadata({
     description: post.metaDescription,
     path: `/blog/${post.slug}`,
     keywords: post.metaKeywords,
+    image: post.image,
+    ogType: "article",
+    publishedTime: post.dateISO,
+    authors: [post.author],
   });
 }
 
@@ -83,6 +87,16 @@ export default async function BlogPostPage({
             </div>
           </div>
         </div>
+
+        {/* ── Hero image ──────────────────────────────────────────────────── */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={post.image}
+          alt={post.title}
+          className="w-full h-64 sm:h-80 lg:h-96 object-cover"
+          loading="eager"
+          decoding="async"
+        />
 
         {/* ── Article body ────────────────────────────────────────────────── */}
         <article className="py-14 bg-light-bg border-b border-light-border">

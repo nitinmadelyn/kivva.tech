@@ -52,9 +52,18 @@ export default function BlogPage() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group flex flex-col sm:flex-row gap-5 p-6 rounded-2xl border border-light-border bg-light-surface hover:border-brand-blue-border hover:bg-brand-blue-muted transition-all duration-200"
+                  className="group flex flex-col sm:flex-row gap-5 rounded-2xl border border-light-border bg-light-surface hover:border-brand-blue-border hover:bg-brand-blue-muted transition-all duration-200 overflow-hidden"
                 >
-                  <div className="flex-1 min-w-0">
+                  {/* Thumbnail */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full sm:w-48 h-44 sm:h-auto object-cover flex-shrink-0"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="flex-1 min-w-0 p-6 sm:pl-0 sm:py-6 sm:pr-6">
                     <div className="flex flex-wrap items-center gap-2 mb-2">
                       <span className="text-xs font-semibold text-brand-blue">{post.category}</span>
                       <span className="text-light-text-faint text-xs">·</span>
@@ -73,7 +82,7 @@ export default function BlogPage() {
                       <span className="text-xs text-light-text-muted">{post.author}</span>
                     </div>
                   </div>
-                  <div className="flex items-center self-center flex-shrink-0">
+                  <div className="flex items-center self-center flex-shrink-0 pr-6 sm:pr-0">
                     <svg className="w-5 h-5 text-light-text-faint group-hover:text-brand-blue transition-colors" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d={ARROW_ICON} />
                     </svg>

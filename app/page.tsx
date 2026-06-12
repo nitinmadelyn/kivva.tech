@@ -24,6 +24,7 @@ import CaseStudies from "@/components/home/CaseStudies";
 import HowItWorks from "@/components/home/HowItWorks";
 import Testimonials from "@/components/home/Testimonials";
 import BlogPreview from "@/components/home/BlogPreview";
+import ReviewBadges from "@/components/home/ReviewBadges";
 import FinalCTA from "@/components/home/FinalCTA";
 
 // ─── Page-level SEO metadata ──────────────────────────────────────────────────
@@ -77,7 +78,10 @@ export default function HomePage() {
         {/* 7. Blog preview — 3 recent articles (builds authority + SEO) */}
         <BlogPreview />
 
-        {/* 8. Final CTA — book a call with objection-killers below the buttons */}
+        {/* 8. Review scores + partner badges — moved here from TrustBar */}
+        <ReviewBadges />
+
+        {/* 9. Final CTA — book a call with objection-killers below the buttons */}
         <FinalCTA />
       </main>
 

@@ -96,7 +96,7 @@ export default function DesktopNav() {
               aria-haspopup="true"
               aria-expanded={openMenu === item.label}
               {...triggerProps(item.label)}
-              className={`inline-flex items-center gap-1 px-3 py-2 text-sm rounded-md transition-colors duration-150 ${
+              className={`inline-flex items-center gap-1 px-3 py-2 text-sm rounded-md transition-colors duration-150 whitespace-nowrap ${
                 openMenu === item.label ? "text-white" : "text-text-dim hover:text-white"
               }`}
             >
@@ -123,50 +123,14 @@ export default function DesktopNav() {
             key={item.label}
             href={item.href}
             onMouseEnter={() => open("none")}
-            className="px-3 py-2 text-sm text-text-dim hover:text-white rounded-md transition-colors duration-150"
+            className="px-3 py-2 text-sm text-text-dim hover:text-white rounded-md transition-colors duration-150 whitespace-nowrap"
           >
             {item.label}
           </Link>
         )
       )}
 
-      {/* Hire Developers */}
-      <div className="relative ml-0.5">
-        <button
-          type="button"
-          aria-haspopup="true"
-          aria-expanded={openMenu === "hire"}
-          {...triggerProps("hire")}
-          className={`inline-flex items-center gap-1 px-3 py-2 text-sm rounded-md transition-colors duration-150 ${
-            openMenu === "hire" ? "text-white" : "text-text-dim hover:text-white"
-          }`}
-        >
-          Hire Developers
-          <svg
-            className={`w-3 h-3 transition-transform duration-200 ${openMenu === "hire" ? "rotate-180" : ""}`}
-            fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24" aria-hidden="true"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-          </svg>
-        </button>
 
-        {/* Panel: positioned directly — no wrapper div so right-0 works correctly */}
-        {openMenu === "hire" && (
-          <HireDevPanel
-            onClose={() => { cancelClose(); setOpenMenu(null); }}
-            panelProps={panelProps}
-          />
-        )}
-      </div>
-
-      {/* Book a Call CTA */}
-      <Link
-        href="/book-a-meeting"
-        onMouseEnter={() => open("none")}
-        className="ml-3 inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-brand-blue hover:bg-brand-blue-hover rounded-md transition-colors duration-150"
-      >
-        Book a Call
-      </Link>
     </div>
   );
 }

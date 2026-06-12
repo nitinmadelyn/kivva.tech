@@ -18,6 +18,7 @@ export interface BlogPostConfig {
   dateISO: string;
   author: string;
   authorRole: string;
+  image: string;
   intro: string;
   sections: BlogSection[];
   tags: string[];
@@ -37,8 +38,9 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostConfig> = {
     readTime: "9 min read",
     date: "May 8, 2026",
     dateISO: "2026-05-08",
-    author: "Michael Chen",
+    author: "Nitin Muchhadiya",
     authorRole: "Head of AI Engineering, KivvaTech",
+    image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80",
     intro: "Retrieval-Augmented Generation has moved from research novelty to the default architecture for knowledge-intensive LLM applications. But the gap between a working RAG demo and a production RAG system is enormous. After shipping RAG systems across healthcare, logistics, fintech, and legal domains, here is what we have learned about building ones that actually work at scale.",
     sections: [
       {
@@ -108,8 +110,9 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostConfig> = {
     readTime: "9 min read",
     date: "May 7, 2026",
     dateISO: "2026-05-07",
-    author: "Michael Chen",
+    author: "Nitin Muchhadiya",
     authorRole: "Head of AI Engineering, KivvaTech",
+    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1200&q=80",
     intro: "The enterprise use cases that generate the most business value from AI are rarely single-turn queries or simple document retrieval. They are multi-step workflows: research and synthesise, validate and route, generate and review, escalate and track. Single-agent LLM systems handle these poorly. Multi-agent architectures handle them well — but they come with their own set of design challenges that most teams underestimate.",
     sections: [
       {
@@ -179,8 +182,9 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostConfig> = {
     readTime: "8 min read",
     date: "May 6, 2026",
     dateISO: "2026-05-06",
-    author: "Priya Sharma",
+    author: "Nitin Muchhadiya",
     authorRole: "CTO, KivvaTech",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80",
     intro: "The conversation about AI strategy in large organisations has matured significantly. Executives are no longer asking whether to adopt AI — they are asking how deeply, how fast, and where. The answer depends on a clearer distinction than most strategic frameworks currently draw: the difference between AI-assisted and AI-first approaches, and how to choose between them.",
     sections: [
       {

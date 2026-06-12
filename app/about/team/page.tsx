@@ -27,7 +27,7 @@ const LEADERS = [
   {
     name: "Nitin Muchhadiya",
     role: "Founder & CEO",
-    photo: "/team/nitin.webp",
+    photo: "/team/nitin.png",
     socials: [
       { label: "LinkedIn",  href: "https://www.linkedin.com/in/nitinmuchhadiya/" },
       { label: "Github",    href: "https://github.com/nitinmadelyn" },

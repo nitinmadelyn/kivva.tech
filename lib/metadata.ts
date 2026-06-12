@@ -12,8 +12,12 @@ import { SITE } from "./constants";
 interface MetadataOverrides {
   title?: string;
   description?: string;
-  path?: string; // e.g. "/hire-developers"
+  path?: string;           // e.g. "/hire-developers"
   keywords?: string[];
+  image?: string;          // absolute URL or /public-relative path — overrides og-default.png
+  ogType?: "website" | "article";
+  publishedTime?: string;  // ISO date — used when ogType === "article"
+  authors?: string[];      // used when ogType === "article"
 }
 
 // ─── Default SEO values ───────────────────────────────────────────────────────
@@ -40,6 +44,8 @@ const DEFAULT_KEYWORDS = [
 
 // ─── Main factory function ────────────────────────────────────────────────────
 
+const DEFAULT_OG_IMAGE = `${SITE.url}/og-default.png`;
+
 export function buildMetadata(overrides: MetadataOverrides = {}): Metadata {
   const title = overrides.title
     ? `${overrides.title} | KivvaTech`
@@ -51,12 +57,23 @@ export function buildMetadata(overrides: MetadataOverrides = {}): Metadata {
     ? [...DEFAULT_KEYWORDS, ...overrides.keywords]
     : DEFAULT_KEYWORDS;
 
+  // Resolve OG image — absolute URL wins, /public path gets the site origin prepended
+  const rawImage = overrides.image ?? DEFAULT_OG_IMAGE;
+  const ogImageUrl = rawImage.startsWith("http") ? rawImage : `${SITE.url}${rawImage}`;
+  const ogImageAlt = overrides.title
+    ? `${overrides.title} | KivvaTech`
+    : "KivvaTech — AI Engineering & Enterprise Software";
+
+  const ogType = overrides.ogType ?? "website";
+
   return {
     // ── Core ──────────────────────────────────────────────────────────────────
     title,
     description,
     keywords,
-    authors: [{ name: "KivvaTech", url: SITE.url }],
+    authors: overrides.authors
+      ? overrides.authors.map((name) => ({ name }))
+      : [{ name: "KivvaTech", url: SITE.url }],
     creator: "KivvaTech",
     publisher: "KivvaTech",
 
@@ -65,22 +82,29 @@ export function buildMetadata(overrides: MetadataOverrides = {}): Metadata {
       canonical: canonicalUrl,
     },
 
-    // ── Open Graph (Facebook, LinkedIn previews) ──────────────────────────────
+    // ── Open Graph ────────────────────────────────────────────────────────────
     openGraph: {
-      type: "website",
+      type: ogType,
       siteName: SITE.name,
       url: canonicalUrl,
       title,
       description,
       images: [
         {
-          url: `${SITE.url}/og-default.png`,
+          url: ogImageUrl,
           width: 1200,
           height: 630,
-          alt: "KivvaTech — AI Engineering & Enterprise Software",
+          alt: ogImageAlt,
         },
       ],
       locale: "en_US",
+      // Article-specific fields (only emitted when ogType === "article")
+      ...(ogType === "article" && overrides.publishedTime
+        ? { publishedTime: overrides.publishedTime }
+        : {}),
+      ...(ogType === "article" && overrides.authors
+        ? { authors: overrides.authors }
+        : {}),
     },
 
     // ── Twitter / X Card ──────────────────────────────────────────────────────
@@ -90,7 +114,7 @@ export function buildMetadata(overrides: MetadataOverrides = {}): Metadata {
       creator: "@kivva_tech",
       title,
       description,
-      images: [`${SITE.url}/og-default.png`],
+      images: [ogImageUrl],
     },
 
     // ── Robots ────────────────────────────────────────────────────────────────

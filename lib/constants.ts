@@ -281,6 +281,7 @@ export interface BlogPost {
   readTime: string;
   date: string;
   href: string;
+  image: string;
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -292,6 +293,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "9 min",
     date: "May 8, 2026",
     href: "/blog/building-production-ready-rag-systems-2026",
+    image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80",
   },
   {
     id: "multi-agent",
@@ -301,6 +303,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "9 min",
     date: "May 7, 2026",
     href: "/blog/multi-agent-systems-enterprise",
+    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=80",
   },
   {
     id: "ai-strategy",
@@ -310,6 +313,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "8 min",
     date: "May 6, 2026",
     href: "/blog/ai-first-vs-ai-assisted-strategy",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80",
   },
 ];
 

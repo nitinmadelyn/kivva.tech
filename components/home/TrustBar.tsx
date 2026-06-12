@@ -8,8 +8,7 @@
  * Server Component — no "use client" required.
  */
 
-import Image from "next/image";
-import { CLIENT_LOGOS, REVIEWS } from "@/lib/constants";
+import { CLIENT_LOGOS } from "@/lib/constants";
 
 export default function TrustBar() {
   return (
@@ -25,52 +24,17 @@ export default function TrustBar() {
         </p>
 
         {/* ── Scrolling logo strip ─────────────────────────────────────────── */}
-        {/*
-         * Overflow is hidden on the wrapper. The inner flex row is duplicated
-         * so animate-marquee can scroll continuously without a visible reset.
-         */}
-        <div
-          className="overflow-hidden w-full"
-          aria-hidden="true"
-        >
+        <div className="overflow-hidden w-full" aria-hidden="true">
           <div className="flex items-center gap-12 w-max animate-marquee">
-            {/* First copy */}
             {CLIENT_LOGOS.map((logo) => (
               <ClientLogo key={logo.name} {...logo} />
             ))}
-            {/* Second copy — ensures seamless loop */}
             {CLIENT_LOGOS.map((logo) => (
               <ClientLogo key={`${logo.name}-dup`} {...logo} />
             ))}
           </div>
         </div>
 
-        {/* ── Divider ──────────────────────────────────────────────────────── */}
-        <div className="mt-7 border-t border-light-border" />
-
-        {/* ── Review platform logos + scores ───────────────────────────────── */}
-        <div className="mt-5 flex flex-wrap items-center justify-center gap-6">
-          {REVIEWS.map(({ platform, score }) => (
-            <div
-              key={platform}
-              className="flex items-center gap-2"
-              aria-label={`${score} on ${platform}`}
-            >
-              <PlatformLogo platform={platform} />
-              <div className="flex flex-col leading-none">
-                <span className="text-amber-400 text-xs tracking-wide" aria-hidden="true">★★★★★</span>
-                <span className="text-[11px] font-semibold text-light-text mt-0.5">{score} / 5</span>
-              </div>
-            </div>
-          ))}
-
-          {/* Separator */}
-          <span className="text-light-border hidden sm:block" aria-hidden="true">|</span>
-
-          {/* Partner badges */}
-          <ShopifyPartnerLogo />
-          <AWSCertifiedLogo />
-        </div>
       </div>
     </section>
   );
@@ -158,11 +122,14 @@ function ClientLogo({
 }) {
   return (
     <div className="flex-shrink-0 flex items-center justify-center px-4">
-      <Image
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         src={`/logos/${file}`}
         alt={`${name} logo`}
         width={width}
         height={height}
+        loading="lazy"
+        decoding="async"
         className="opacity-80 hover:opacity-100 transition-opacity duration-200"
         style={{ height: `${height}px`, width: "auto" }}
       />
