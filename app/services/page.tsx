@@ -12,6 +12,7 @@ import { HERO_STATS } from "@/lib/constants";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { NAV_ITEMS } from "@/lib/nav-data";
+import SisterAgencyCallout from "@/components/common/SisterAgencyCallout";
 
 export const metadata: Metadata = buildMetadata({
   title: "Services",
@@ -113,6 +114,13 @@ export default function ServicesPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* ── Sister agency callout ──────────────────────────────────────── */}
+        <section className="py-12 bg-light-bg border-b border-light-border">
+          <div className={CONTAINER}>
+            <SisterAgencyCallout />
           </div>
         </section>
 

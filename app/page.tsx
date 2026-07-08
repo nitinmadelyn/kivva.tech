@@ -26,6 +26,7 @@ import Testimonials from "@/components/home/Testimonials";
 import BlogPreview from "@/components/home/BlogPreview";
 import ReviewBadges from "@/components/home/ReviewBadges";
 import FinalCTA from "@/components/home/FinalCTA";
+import SisterAgencyCallout from "@/components/common/SisterAgencyCallout";
 
 // ─── Page-level SEO metadata ──────────────────────────────────────────────────
 // Overrides the root-layout defaults just for the homepage.
@@ -65,6 +66,11 @@ export default function HomePage() {
 
         {/* 3. Services — what KivvaTech builds */}
         <Services />
+
+        {/* 3a. Sister agency cross-sell — contextual placement right after services */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <SisterAgencyCallout />
+        </div>
 
         {/* 4. Case studies — outcome-led cards with big metric numbers */}
         <CaseStudies />
