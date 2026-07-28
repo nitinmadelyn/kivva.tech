@@ -52,8 +52,8 @@ const VALUES = [
 
 const MILESTONES = [
   { year: "2005", event: "Founded in Ahmedabad, India as a custom software consultancy." },
-  { year: "2010", event: "Expanded to serve US and European clients. First 100 engineers hired." },
-  { year: "2016", event: "Scaled to 200+ engineers. Crossed 500 global clients across 10+ countries." },
+  { year: "2010", event: "Expanded to serve US and European clients. First 10 engineers hired." },
+  { year: "2016", event: "Scaled to 20+ engineers. Crossed 500 global clients across 10+ countries." },
   { year: "2019", event: "Launched dedicated AI/ML practice. First LLM and computer vision projects shipped." },
   { year: "2022", event: "480+ active clients across 15+ countries. Shopify Partner and AWS Certified." },
   { year: "2024", event: "Full AI Engineering division launched. Agentic systems, RAG, and custom model work at scale." },
@@ -131,7 +131,7 @@ export default function AboutPage() {
                 {[
                   { value: "15+", label: "Years in operation" },
                   { value: "480+", label: "Completed projects" },
-                  { value: "500+", label: "Engineers globally" },
+                  { value: "50+", label: "Engineers globally" },
                   { value: "3+ yrs", label: "Avg. client relationship" },
                 ].map(({ value, label }) => (
                   <div key={label} className="rounded-xl border border-light-border bg-light-surface p-5 text-center">

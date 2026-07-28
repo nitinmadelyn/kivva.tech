@@ -13,7 +13,7 @@ import RolesWithApply, { type Role } from "@/components/careers/RolesWithApply";
 export const metadata: Metadata = buildMetadata({
   title: "Careers at KivvaTech",
   description:
-    "Join KivvaTech — a global AI and software engineering company with 500+ engineers across 15+ countries. We are always looking for exceptional engineers.",
+    "Join KivvaTech — a global AI and software engineering company with 50+ engineers across 15+ countries. We are always looking for exceptional engineers.",
   path: "/careers",
   keywords: ["KivvaTech careers", "AI engineering jobs", "software engineering jobs", "remote engineering jobs"],
 });
@@ -107,7 +107,7 @@ export default function CareersPage() {
               <span className="text-brand-blue">that actually matter.</span>
             </h1>
             <p className="text-text-dim max-w-2xl text-base leading-relaxed mb-8">
-              We are a team of 500+ engineers who care deeply about the quality of what we build. If you want to work on frontier AI, ship products that reach real users, and get better every year — this is the place.
+              We are a team of 50+ engineers who care deeply about the quality of what we build. If you want to work on frontier AI, ship products that reach real users, and get better every year — this is the place.
             </p>
             <a
               href="#open-roles"

@@ -2,7 +2,7 @@
  * SisterAgencyCallout
  *
  * A contextual cross-sell banner linking visitors to TheClickSavvy,
- * KivvaTech's sister digital marketing agency.
+ * KivvaTech's sister performance marketing agency.
  *
  * Server Component — no client-side JS needed.
  */
@@ -14,7 +14,7 @@ export default function SisterAgencyCallout() {
       <div className="flex-1 min-w-0">
         <p className="text-xs text-text-dim mb-1">Also from KivvaTech group</p>
         <p className="text-sm font-semibold text-white mb-1">
-          Looking for digital marketing?
+          Looking for performance marketing?
         </p>
         <p className="text-xs text-text-dim leading-relaxed">
           Our sister agency specialises in SEO, paid ads, and brand strategy.

@@ -124,7 +124,7 @@ export default function TeamPage() {
               <span className="text-brand-blue">the products.</span>
             </h1>
             <p className="text-text-dim max-w-2xl text-base leading-relaxed">
-              500+ engineers, architects, and product specialists across India, the US, and Europe — united by a commitment to shipping things that work.
+              50+ engineers, architects, and product specialists across India, the US, and Europe — united by a commitment to shipping things that work.
             </p>
           </div>
         </section>
